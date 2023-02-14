@@ -1,0 +1,23 @@
+.one
+{
+ color: rgb(8, 111, 25);
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ background-color: rgb(224, 235, 188);
+ 
+}
+#im
+{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.carousel-inner
+{
+    object-fit:cover;
+
+}

@@ -1,0 +1,22 @@
+.one
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(72, 108, 137);
+}
+.ed
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.et
+{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+#on
+{
+    color: rgb(60, 95, 24);
+    font-weight: bolder;
+}
