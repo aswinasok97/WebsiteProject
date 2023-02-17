@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fireblog-e8cd3": {
+      "hosting": {
+        "wildblog": [
+          "fireblog-e8cd3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fireblog-e8cd3"
+  }
+}
