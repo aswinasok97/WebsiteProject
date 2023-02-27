@@ -1,23 +1,57 @@
-.one
-{
- color: rgb(8, 111, 25);
- display: flex;
- justify-content: center;
- text-align: center;
- font-family: Georgia, 'Times New Roman', Times, serif;
- font-weight: bold;
- background-color: rgb(250, 251, 246);
- 
-}
-#im
+.display-1
 {
     display: flex;
     justify-content: center;
+    text-align: center;
+    color:rgb(25, 76, 22);
+    font-style: oblique;
+    font-weight: bold;
+  
     
 }
-
-.carousel-inner
+.im
 {
-    object-fit:cover;
+    display: flex;
+    justify-content: center;
+    image-rendering: pixelated;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-timing-function:ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+   
 
+#tg
+{
+  font-size: 100px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:lighter;
+  color: rgba(240, 240, 240, 0.782);
+}
+
+@keyframes example
+{
+  
+}
+.card
+{
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: -2s;
+}
+.img-responsive
+{
+  border-radius: 15px;
+
+  margin-left: -3.1cm;
+  object-fit: cover;
+ 
+  
+}
+#ft
+{
+  color: rgb(249, 252, 254);
 }

@@ -2,7 +2,8 @@
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    color:rgb(72, 108, 137);
+    color:rgba(250, 252, 253, 0.743);
+    background-color: rgba(43, 87, 34, 0.959);
 }
 .ed
 {
@@ -19,4 +20,8 @@
 {
     color: rgb(60, 95, 24);
     font-weight: bolder;
+}
+#tr
+{
+    border-radius: 50px;
 }
