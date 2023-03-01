@@ -1,27 +1,15 @@
 .one
 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:sans-serif;
     font-weight: bold;
-    color:rgba(250, 252, 253, 0.743);
-    background-color: rgba(43, 87, 34, 0.959);
+    color:rgba(86, 36, 49, 0.931);
+    background-color: rgba(250, 253, 249, 0.439);
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
-.ed
-{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    font-weight: bold;
-}
-.et
-{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 25px;
-}
-#on
-{
-    color: rgb(60, 95, 24);
-    font-weight: bolder;
-}
-#tr
-{
-    border-radius: 50px;
+
+.accordion-body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
 }
