@@ -1,5 +1,17 @@
 .container{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: larger;
-    font-weight: bold;
+    font-size:2rem;
+    font-weight:bolder;
+    color: rgb(53, 53, 125);
+    background-image: url('https://gijn.org/wp-content/uploads/2020/01/Trafficked-to-Extinction-771x571.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:initial; 
+}
+.tr{
+    color: rgb(184, 2, 47);
+    font-weight:bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:x-large;
+    margin-left: 9em;
 }
