@@ -46,5 +46,25 @@ export class ContactComponent {
     console.log(this.path);
     this.af.upload("/files"+Math.random()+this.path,this.path)
  }
+ updateData(id:any) {
+  const docCollection = doc(this.firestore, 'users', id)
+  const updateD = {
+    name: 'World',
+  }
+  updateDoc(docCollection, updateD).then(() => {
+    console.log("success")
+  }).catch((err) => {
+    console.log(err);
+  })
+}
+
+deteleData(id: any) {
+  const userCollection = doc(this.firestore, 'users',id)
+  deleteDoc(userCollection).then(() => {
+    console.log("data deleted");
+  }).catch((err) => { 
+    console.log(err);
+  })
+}
   
 }

@@ -28,6 +28,12 @@ import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
 
 
 
@@ -41,6 +47,12 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     NavbarComponent,
     FooterComponent,
     SingleComponent,
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
+    
     
     
   ],
@@ -60,7 +72,10 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     provideStorage(() => getStorage()),
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    BrowserAnimationsModule,
+    FormsModule
+   
   
     
     

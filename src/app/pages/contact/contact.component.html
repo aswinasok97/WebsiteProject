@@ -29,6 +29,11 @@
       <button  type="submit" id="liveToastBtn" class="btn btn-primary">Submit</button>
     </div>
    </form>
+   <ul class="list-group" *ngFor="let data of userData | async">
+    <li class="list-group-item">{{data.name}}</li>
+    <button type="submit" class="btn btn-primary" (click)="updateData(data.id)">Edit</button>
+    <button type="submit" class="btn btn-primary" (click)="deteleData(data.id)">Delete</button>
+  </ul>
   </div>
   <div class="ft">
     <footer class="bg-light text-center text-lg-start">

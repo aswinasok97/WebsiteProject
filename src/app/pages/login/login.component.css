@@ -1,0 +1,37 @@
+.ht
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3.5rem;
+    color: rgb(225, 243, 238);
+    font-weight: bold;
+    height:5rem;
+}
+.col
+{
+    margin-top: 2rem;
+    margin-left: 28rem;
+    padding-left: auto;
+    padding-right: auto;
+}
+.container-fluid
+{
+    background-image: url('https://i.pinimg.com/originals/ed/45/8d/ed458dc0e24bea3780e139479e99468b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:initial; 
+    font-size:1.2rem;
+    height: 50rem;
+}
+
+.card-body
+{
+    background-color: gainsboro;
+}
+.tx
+{
+    font-size: 1.5rem;
+    color: crimson;
+}
