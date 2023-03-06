@@ -10,6 +10,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SingleComponent } from './pages/single/single.component';
 import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
+import { AuthGuard } from './shared/auth.guard';
 
 
 
@@ -22,7 +23,8 @@ const routes: Routes = [
     path:'login',component:LoginComponent
   },
   {
-    path:'dashboard',component:DashboardComponent
+    path:'dashboard',component:DashboardComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'register',component:RegisterComponent
@@ -36,16 +38,20 @@ const routes: Routes = [
   },
 
   {
-    path:'home',component:HomeComponent
+    path:'home',component:HomeComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:'about',component: AboutComponent
+    path:'about',component: AboutComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:'portfolio',component: PortfolioComponent
+    path:'portfolio',component: PortfolioComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:'contact',component:ContactComponent
+    path:'contact',component:ContactComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'single',component:SingleComponent

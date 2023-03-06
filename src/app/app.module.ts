@@ -4,8 +4,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-
-
+import { NgChartsModule } from 'ng2-charts';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +39,7 @@ import { VerifyEmailComponent } from './pages/verify-email/verify-email.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +54,8 @@ import { VerifyEmailComponent } from './pages/verify-email/verify-email.componen
     RegisterComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent,
+    VerifyEmailComponent
+  
     
     
     
@@ -74,7 +78,11 @@ import { VerifyEmailComponent } from './pages/verify-email/verify-email.componen
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    NgChartsModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
+    HttpClientModule
    
   
     

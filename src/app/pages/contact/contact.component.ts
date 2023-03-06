@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Firestore,collection,addDoc,collectionData,doc,updateDoc, deleteDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { HeroService } from 'src/app/hero.service';
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
@@ -9,13 +11,19 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
  
   userData !: Observable <any>
+  locationData=null;
 
-  constructor(private firestore: Firestore,private af:AngularFireStorage) { 
+  constructor(private firestore: Firestore,private af:AngularFireStorage,private hero:HeroService) { 
     this.getData()
   }
+  ngOnInit() {
+    this.hero.getLocation().subscribe((data: any)=>{
+    this.locationData = data;
+});
+}
 
   addData(f:any) {
     //console.log(f.value);
@@ -66,5 +74,6 @@ deteleData(id: any) {
     console.log(err);
   })
 }
+
   
 }

@@ -71,5 +71,10 @@ sendEmailForVerification(user:any){
   })
 
 }
+ 
+IsLoggedIn()
+{
+return localStorage.getItem('token')!=null;
+}
 
 }
