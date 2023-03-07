@@ -15,13 +15,20 @@ export class ContactComponent implements OnInit {
  
   userData !: Observable <any>
   locationData=null;
+  f:any
+  
+   lt = document.getElementsByName("latitude");
+   ln = document.getElementsByName("longitude");
 
-  constructor(private firestore: Firestore,private af:AngularFireStorage,private hero:HeroService) { 
+  constructor(private firestore: Firestore,private af:AngularFireStorage,private hero:HeroService,public http:HttpClient) { 
     this.getData()
   }
   ngOnInit() {
-    this.hero.getLocation().subscribe((data: any)=>{
-    this.locationData = data;
+    this.getLocation(this.f.value).subscribe((data: any)=>{
+      console.log(data);
+      this.locationData = data;
+
+     
 });
 }
 
@@ -75,5 +82,9 @@ deteleData(id: any) {
   })
 }
 
+getLocation(f:any):Observable<any>
+  {
+    return this.http.get('http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={lon}&limit={limit}&appid=dec7bb2d34146481c822673e7106cb92');
+  }
   
 }
