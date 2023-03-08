@@ -11,35 +11,34 @@ import {HttpClient} from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
  
   userData !: Observable <any>
-  locationData=null;
-  f:any
-  
-   lt = document.getElementsByName("latitude");
-   ln = document.getElementsByName("longitude");
+  lt:any=''
+  ln:any=''
+  data:any
 
-  constructor(private firestore: Firestore,private af:AngularFireStorage,private hero:HeroService,public http:HttpClient) { 
+
+  constructor(private firestore: Firestore,private af:AngularFireStorage,private hero:HeroService,private http:HttpClient)
+  { 
     this.getData()
+    this.getLocation();
   }
-  ngOnInit() {
-    this.getLocation(this.f.value).subscribe((data: any)=>{
-      console.log(data);
-      this.locationData = data;
-
-     
-});
-}
+  ngOnInit() {}
+   
 
   addData(f:any) {
     //console.log(f.value);
+    let userData = {
+      "data":f.value,
+      "location":this.data
+    }
     const userCollection = collection(this.firestore, 'users')
-    addDoc(userCollection, f.value).then(() => { 
+    addDoc(userCollection, userData).then(() => { 
       console.log("Data added successfully")
     }).catch((err) => {
       console.log(err)
-    })
+    })    
   }
 
 
@@ -82,9 +81,19 @@ deteleData(id: any) {
   })
 }
 
-getLocation(f:any):Observable<any>
-  {
-    return this.http.get('http://api.openweathermap.org/geo/1.0/reverse?lat={lat}&lon={lon}&limit={limit}&appid=dec7bb2d34146481c822673e7106cb92');
-  }
+
+getLocation()
+{
+  console.log(this.lt);
+  console.log(this.ln);
+  this.hero.getLoc(this.lt,this.ln).subscribe(res => {
+   // console.log(res);
+    this.data=res
+    this.data=this.data[0].name
+    console.log(this.data);
+    
+  })
+}
+
   
 }

@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
+
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private fireauth: AngularFireAuth,private router: Router) { }
+  constructor(private fireauth: AngularFireAuth,private router: Router,private http:HttpClient) { }
   //login method
   login(email :string,password :string)
   {
@@ -76,5 +78,7 @@ IsLoggedIn()
 {
 return localStorage.getItem('token')!=null;
 }
+
+
 
 }

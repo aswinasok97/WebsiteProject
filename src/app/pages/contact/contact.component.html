@@ -1,34 +1,11 @@
-<form #f="ngForm" (ngSubmit)=" getLocation(f)">
-  <div class="mb-3">
-    <label class="form-label">Latitude</label>
-    <input type="text" class="form-control" name="latitude" ngModel>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Longitude</label>
-    <input type="text" class="form-control" name="longitude" ngModel>
-  </div>
-  <div class="mt-5">
-    <button  type="submit" class="btn btn-primary">GetLocation</button>
-  </div>
-  <div class="mt-4">
-    <label class="form-label"><b>Location</b></label><br>
-    <textarea id="lcn" name="loc" ></textarea>
-  </div>
-  <div class="lc">
-    <p *ngFor='let item of locationData'>
-      {{item.name}}
-      Local_Names: {{item.local_names}}
-      Latitude: {{item.lat}}
-      Longitude:{{item.lon}}
-      Country: {{item.country}}
-   </p>
-  </div>
-</form>
-<div class="sb">
+<div class="container1">
+  <div class="tr"><h1>Faunafari Wild-Animals Trafficking Report Portal</h1></div>
+</div>
+<div class="ctr">
   <form #f="ngForm" (ngSubmit)="addData(f)">
     <div class="mb-3">
       <label class="form-label">Name</label>
-      <input type="text" class="form-control" name="name" ngModel>
+      <input type="text" class="form-control" name="name" ngModel >
     </div>
     <div class="mb-3">
       <label class="form-label">Email address</label>
@@ -37,6 +14,18 @@
     <div class="mb-3">
       <label class="form-label">Contact Number</label>
       <input type="text" class="form-control" name="pass" ngModel>
+    </div>
+        <div class="mb-3">
+      <label class="form-label">Latitude</label>
+      <input type="text" id="lw" class="form-control" name="latitude" [(ngModel)]="lt">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Longitude</label>
+      <input type="text" id="lx" class="form-control" name="longitude" [(ngModel)]="ln" >
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" ngModel [value]="data">
+      <button (click)="getLocation()">Get location</button>
     </div>
     <div>
       <label for="Image">Image File</label>
@@ -47,4 +36,4 @@
       <button  type="submit" id="liveToastBtn" class="btn btn-primary">Submit</button>
     </div>
   </form>
-</div>
+ 

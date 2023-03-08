@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
     return;
   }
   if(this.password == '')
+
   {
     alert('Please enter password');
     return;
